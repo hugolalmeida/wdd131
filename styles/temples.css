@@ -1,0 +1,149 @@
+:root {
+  --primary: #1b2a41;
+  --secondary: #d4a373;
+  --accent: #f4efe8;
+  --dark: #1f1f1f;
+  --soft: #ece7e1;
+  --text: #1b1b1b;
+  --shadow: rgba(27, 42, 65, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(180deg, #f3efe9 0%, #e7e2dc 100%);
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.site-header {
+  background-color: var(--primary);
+  color: #fff;
+  box-shadow: 0 3px 10px var(--shadow);
+}
+
+.header-inner {
+  width: min(1100px, calc(100% - 1.5rem));
+  margin: 0 auto;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.8rem;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+
+nav {
+  margin-top: 0.75rem;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.nav-list.open {
+  display: flex;
+}
+
+.nav-list a {
+  display: block;
+  padding: 0.8rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0.35rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  background-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 0.75rem;
+  right: 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.page-main {
+  width: min(1100px, calc(100% - 1.5rem));
+  margin: 0 auto;
+  padding: 1.5rem 0 2.5rem;
+}
+
+.page-heading {
+  margin: 0 0 1rem;
+  text-align: center;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-family: 'Playfair Display', serif;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.temple-card {
+  margin: 0;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 0.85rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(27, 42, 65, 0.12);
+  border: 1px solid rgba(27, 42, 65, 0.08);
+}
+
+.temple-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.temple-card figcaption {
+  padding: 0.85rem 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--primary);
+  background-color: var(--accent);
+}
+
+.site-footer {
+  background-color: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 1.25rem 1rem;
+}
+
+.site-footer p {
+  margin: 0.35rem 0;
+}
+
+.site-footer p:last-child {
+  color: #f6d58d;
+}
