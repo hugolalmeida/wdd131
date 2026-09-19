@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazil | Place</title>
+    <meta name="description" content="A responsive place page featuring Brazil, its geography, and current weather details.">
+    <meta name="author" content="Hugo Almeida">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script defer src="scripts/place.js"></script>
+</head>
+<body>
+    <main class="place-page">
+        <section class="hero" aria-labelledby="place-title">
+            <h1 id="place-title">Brazil</h1>
+
+            <picture class="hero-image">
+                <source media="(min-width: 700px)" srcset="images/place-horizontal.webp">
+                <img src="images/place-vertical.webp" srcset="images/place-vertical.webp 900w" sizes="100vw" alt="Christ the Redeemer overlooking Rio de Janeiro, Brazil" width="900" height="1200">
+            </picture>
+
+            <section class="info-panel data-panel" aria-labelledby="data-heading">
+                <h2 id="data-heading">Data</h2>
+                <dl>
+                    <div><dt>Area:</dt><dd>8,515,767 km²</dd></div>
+                    <div><dt>Population:</dt><dd>216.4 million</dd></div>
+                    <div><dt>Capital:</dt><dd>Brasília</dd></div>
+                    <div><dt>Languages:</dt><dd>Portuguese</dd></div>
+                    <div><dt>Currency:</dt><dd>Brazilian Real</dd></div>
+                    <div><dt>Time Zone:</dt><dd>UTC-3</dd></div>
+                    <div><dt>Calling Code:</dt><dd>+55</dd></div>
+                    <div><dt>Internet TLD:</dt><dd>.br</dd></div>
+                </dl>
+            </section>
+
+            <section class="info-panel weather-panel" aria-labelledby="weather-heading">
+                <h2 id="weather-heading">Weather</h2>
+                <svg class="weather-icon" viewBox="0 0 64 64" role="img" aria-label="Partly cloudy" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="11" fill="#ffcc29" />
+                    <path d="M20 48h27a9 9 0 0 0 0-18 13 13 0 0 0-25-2 10 10 0 0 0-2 20Z" fill="#f4f7f2" stroke="#164c8c" stroke-width="2" />
+                </svg>
+                <dl>
+                    <div><dt>Temperature:</dt><dd><span id="temperature">9</span>°C</dd></div>
+                    <div><dt>Conditions:</dt><dd>Partly Cloudy</dd></div>
+                    <div><dt>Wind:</dt><dd><span id="wind-speed">15</span> km/h</dd></div>
+                    <div><dt>Wind Chill:</dt><dd id="wind-chill">N/A</dd></div>
+                </dl>
+            </section>
+
+            <footer>
+                <p>&copy; <span id="copyright-year"></span> Hugo Almeida | Brazil</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>

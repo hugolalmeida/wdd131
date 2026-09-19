@@ -1,0 +1,169 @@
+:root {
+    --green: #006a4e;
+    --yellow: #ffcc29;
+    --blue: #164c8c;
+    --red: #d90429;
+    --ink: #13231f;
+    --paper: #fffdf8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--green);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+}
+
+.place-page {
+    width: 100%;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background: var(--paper);
+    overflow: hidden;
+}
+
+.hero-image,
+.hero-image img {
+    display: block;
+    width: 100%;
+}
+
+.hero-image img {
+    height: min(92vh, 720px);
+    object-fit: cover;
+    object-position: center;
+}
+
+h1 {
+    margin: 0;
+    padding: 0.55rem 1rem;
+    background: var(--green);
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(19, 35, 31, 0.45);
+}
+
+.info-panel {
+    padding: 1.2rem 1.4rem;
+    background: var(--paper);
+}
+
+.info-panel h2 {
+    margin: 0 0 0.8rem;
+    color: var(--green);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.35rem;
+    text-align: center;
+}
+
+dl {
+    margin: 0;
+}
+
+dl div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+}
+
+dt {
+    font-weight: 700;
+    text-align: right;
+}
+
+dd {
+    margin: 0;
+}
+
+.weather-icon {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto 0.65rem;
+    line-height: 1;
+    text-align: center;
+}
+
+footer {
+    padding: 0.9rem 1rem;
+    background: var(--blue);
+    color: #fff;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.15rem 0;
+}
+
+@media (min-width: 700px) {
+    .hero {
+        min-height: 100vh;
+        background: #fff;
+    }
+
+    .hero-image img {
+        height: calc(100vh - 7rem);
+        min-height: 560px;
+        object-fit: cover;
+    }
+
+    h1 {
+        position: relative;
+        width: 100%;
+        z-index: 2;
+        background: var(--green);
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .info-panel {
+        position: absolute;
+        z-index: 1;
+        width: 270px;
+        padding: 0.85rem 1rem;
+        background: rgba(255, 253, 248, 0.92);
+        box-shadow: 0 5px 14px rgba(19, 35, 31, 0.18);
+    }
+
+    .data-panel {
+        top: 5.5rem;
+        left: 1.25rem;
+    }
+
+    .weather-panel {
+        right: 1.25rem;
+        bottom: 5.25rem;
+    }
+
+    .info-panel h2 {
+        margin-bottom: 0.5rem;
+        text-align: left;
+    }
+
+    .weather-icon {
+        display: none;
+    }
+
+    .weather-panel h2::after {
+        content: ' ⛅';
+        color: var(--yellow);
+    }
+
+    footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
