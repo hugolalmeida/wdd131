@@ -290,6 +290,152 @@ footer p:last-child {
     clip-path: inset(50%);
 }
 
+.review-page {
+    padding: 0;
+    background: var(--white);
+}
+
+.review-page .page-header {
+    margin: 0;
+    padding: 0.7rem 1rem;
+}
+
+.review-page .page-header h1 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.review-page main {
+    width: min(calc(100% - 1rem), 38rem);
+    margin: 0.8rem auto 0;
+}
+
+.review-page .review-form {
+    padding: 0.85rem;
+    border: 1px solid #c5bbc5;
+    border-radius: 3px;
+    background: #d6cfd6;
+    box-shadow: none;
+}
+
+.review-page .form-heading {
+    display: none;
+}
+
+.review-page .form-field {
+    margin-bottom: 0.8rem;
+}
+
+.review-page .form-field > label,
+.review-page .form-field legend {
+    margin-bottom: 0.2rem;
+    font-size: 0.8rem;
+    line-height: 1.35;
+}
+
+.review-page .form-field > label > span[aria-hidden="true"],
+.review-page .form-field legend > span[aria-hidden="true"] {
+    display: none;
+}
+
+.review-page .form-field select,
+.review-page .form-field input[type="date"],
+.review-page .form-field input[type="text"] {
+    min-height: 1.9rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #c7c7c7;
+    border-radius: 0;
+    font-size: 0.8rem;
+}
+
+.review-page .rating-options {
+    gap: 0.2rem;
+}
+
+.review-page .rating-option {
+    min-height: 2.5rem;
+    gap: 0.2rem;
+    border: 0;
+    border-radius: 0;
+    color: var(--ink);
+}
+
+.review-page .rating-option span[aria-hidden="true"] {
+    order: -1;
+    color: var(--ink);
+    font-size: 0.75rem;
+}
+
+.review-page .rating-option input {
+    width: 1.15rem;
+    height: 1.15rem;
+    accent-color: var(--blue);
+}
+
+.review-page .rating-option:has(input:checked) {
+    background: transparent;
+}
+
+.review-page .features-field {
+    display: block;
+}
+
+.review-page .features-field legend {
+    float: none;
+    margin-bottom: 0.25rem;
+}
+
+.review-page .features-field .optional-note {
+    font-style: italic;
+}
+
+.review-page .check-option {
+    min-height: 1.45rem;
+    gap: 0.45rem;
+    font-size: 0.8rem;
+}
+
+.review-page .check-option input {
+    width: 1.15rem;
+    height: 1.15rem;
+    accent-color: var(--blue);
+}
+
+.review-page .form-field textarea {
+    min-height: 5.3rem;
+    padding: 0.4rem 0.5rem;
+    border: 1px solid #c7c7c7;
+    border-radius: 0;
+    background: var(--white);
+}
+
+.review-page .optional-note {
+    color: #1a0046;
+    font-size: 0.72rem;
+}
+
+.review-page .submit-button {
+    padding: 0.4rem 0.75rem;
+    border: 1px solid #aaa;
+    border-radius: 0;
+    background: #eee;
+    color: var(--ink);
+    font-size: 1rem;
+}
+
+.review-page .submit-button:hover {
+    background: #e3e3e3;
+}
+
+.review-page footer {
+    margin: 0;
+    padding: 0.75rem 0.5rem;
+}
+
+.review-page footer p:last-child {
+    color: #fff;
+}
+
 @media (min-width: 40rem) {
     body {
         padding: 0 1.5rem;
