@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product review submission confirmation.">
+    <meta name="author" content="Hugo Almeida">
+    <title>Review Submitted | WDD 131</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/review.js"></script>
+</head>
+<body>
+    <header class="page-header">
+        <p class="course-label">WDD 131 · W05 Assignment</p>
+        <h1>Product Review</h1>
+        <p>Thank you for helping others choose well.</p>
+    </header>
+
+    <main class="confirmation-main">
+        <section class="confirmation" aria-labelledby="confirmation-title">
+            <p class="confirmation-mark" aria-hidden="true">&#10003;</p>
+            <h2 id="confirmation-title">Review received</h2>
+            <p id="confirmation-message" role="status">Your review has been submitted.</p>
+            <p class="review-total">Reviews completed: <strong id="review-count">0</strong></p>
+            <a class="return-link" href="form.html">Write another review</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span>2026 - Hugo Almeida - Brazil</span></p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

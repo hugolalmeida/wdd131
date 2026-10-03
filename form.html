@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Share your experience with a product you have installed.">
+    <meta name="author" content="Hugo Almeida">
+    <title>Product Review | WDD 131</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/form.js"></script>
+</head>
+<body>
+    <header class="page-header">
+        <p class="course-label">WDD 131 · W05 Assignment</p>
+        <h1>Product Review</h1>
+        <p>Tell us how your product is working for you.</p>
+    </header>
+
+    <main>
+        <form action="review.html" method="get" class="review-form">
+            <div class="form-heading">
+                <h2>Write a review</h2>
+                <p>Fields marked with <span aria-hidden="true">*</span> are required.</p>
+            </div>
+
+            <div class="form-field">
+                <label for="product">Product Name <span aria-hidden="true">*</span></label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                </select>
+            </div>
+
+            <fieldset class="form-field rating-field">
+                <legend>Overall Rating <span aria-hidden="true">*</span></legend>
+                <div class="rating-options">
+                    <label class="rating-option" for="rating-1">
+                        <input id="rating-1" type="radio" name="rating" value="1" required>
+                        <span aria-hidden="true">1 ☆</span><span class="visually-hidden">1 star</span>
+                    </label>
+                    <label class="rating-option" for="rating-2">
+                        <input id="rating-2" type="radio" name="rating" value="2" required>
+                        <span aria-hidden="true">2 ☆</span><span class="visually-hidden">2 stars</span>
+                    </label>
+                    <label class="rating-option" for="rating-3">
+                        <input id="rating-3" type="radio" name="rating" value="3" required>
+                        <span aria-hidden="true">3 ☆</span><span class="visually-hidden">3 stars</span>
+                    </label>
+                    <label class="rating-option" for="rating-4">
+                        <input id="rating-4" type="radio" name="rating" value="4" required>
+                        <span aria-hidden="true">4 ☆</span><span class="visually-hidden">4 stars</span>
+                    </label>
+                    <label class="rating-option" for="rating-5">
+                        <input id="rating-5" type="radio" name="rating" value="5" required>
+                        <span aria-hidden="true">5 ☆</span><span class="visually-hidden">5 stars</span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <div class="form-field">
+                <label for="install-date">Date of Installation <span aria-hidden="true">*</span></label>
+                <input id="install-date" type="date" name="installDate" required>
+            </div>
+
+            <fieldset class="form-field features-field">
+                <legend>Useful Features <span class="optional-note">(check all that apply)</span></legend>
+                <label class="check-option" for="feature-durability">
+                    <input id="feature-durability" type="checkbox" name="features" value="durability">
+                    <span>Durability</span>
+                </label>
+                <label class="check-option" for="feature-ease">
+                    <input id="feature-ease" type="checkbox" name="features" value="ease-of-use">
+                    <span>Ease of use</span>
+                </label>
+                <label class="check-option" for="feature-performance">
+                    <input id="feature-performance" type="checkbox" name="features" value="performance">
+                    <span>Performance</span>
+                </label>
+                <label class="check-option" for="feature-design">
+                    <input id="feature-design" type="checkbox" name="features" value="design">
+                    <span>Design</span>
+                </label>
+            </fieldset>
+
+            <div class="form-field">
+                <label for="written-review">Written Review <span class="optional-note">(optional)</span></label>
+                <textarea id="written-review" name="writtenReview" rows="5"></textarea>
+            </div>
+
+            <div class="form-field">
+                <label for="user-name">User Name <span class="optional-note">(optional)</span></label>
+                <input id="user-name" type="text" name="userName" autocomplete="name">
+            </div>
+
+            <input class="submit-button" type="submit" value="Submit Review">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span>2026 - Hugo Almeida - Brazil</span></p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,317 @@
+:root {
+    --ink: #222;
+    --muted: #555;
+    --blue: #1a0046;
+    --blue-dark: #120032;
+    --blue-light: #ece8f5;
+    --paper: #f6f5f8;
+    --white: #fff;
+    --border: #b8b8b8;
+    --focus: #e6a642;
+    --font: "Roboto", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0 1rem;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font);
+    line-height: 1.5;
+}
+
+.page-header {
+    margin: 0 -1rem 1.5rem;
+    padding: 1.5rem 1rem 1.75rem;
+    background: var(--blue);
+    color: var(--white);
+    text-align: center;
+}
+
+.page-header h1,
+.page-header p {
+    margin: 0;
+}
+
+.page-header h1 {
+    margin: 0.2rem 0;
+    font-size: 1.8rem;
+}
+
+.course-label {
+    color: #d4c8ed;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+main {
+    width: min(100%, 38rem);
+    margin: 0 auto 2rem;
+}
+
+.review-form,
+.confirmation {
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    background: var(--white);
+    box-shadow: 0 5px 18px rgb(26 0 70 / 7%);
+}
+
+.form-heading {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.form-heading h2,
+.confirmation h2 {
+    margin: 0 0 0.25rem;
+    color: var(--blue);
+    font-size: 1.35rem;
+}
+
+.form-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.form-heading p span,
+.form-field > label > span[aria-hidden="true"],
+.form-field legend > span[aria-hidden="true"] {
+    color: #a33d2d;
+    font-weight: 700;
+}
+
+.form-field {
+    min-width: 0;
+    margin: 0 0 1.2rem;
+    padding: 0;
+    border: 0;
+}
+
+.form-field > label,
+.form-field legend {
+    display: block;
+    margin-bottom: 0.45rem;
+    color: var(--ink);
+    font-weight: 700;
+}
+
+.form-field select,
+.form-field input[type="date"],
+.form-field input[type="text"],
+.form-field textarea {
+    display: block;
+    width: 100%;
+    min-height: 2.8rem;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid #888;
+    border-radius: 3px;
+    background: var(--white);
+    color: var(--ink);
+    font: inherit;
+}
+
+.form-field textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+.form-field :is(select, input, textarea):focus-visible,
+.rating-option:focus-within,
+.check-option:focus-within,
+.submit-button:focus-visible,
+.return-link:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+}
+
+.rating-options {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.3rem;
+}
+
+.rating-option {
+    display: flex;
+    min-height: 3.25rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1rem;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    color: var(--blue);
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.rating-option span[aria-hidden="true"] {
+    color: #a66700;
+    font-size: 1rem;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.rating-option input {
+    width: 1rem;
+    height: 1rem;
+    margin: 0;
+    accent-color: var(--blue);
+}
+
+.rating-option:has(input:checked) {
+    border-color: var(--blue);
+    background: var(--blue-light);
+}
+
+.optional-note {
+    color: var(--muted);
+    font-size: 0.84rem;
+    font-weight: 400;
+}
+
+.features-field {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.55rem 0.8rem;
+}
+
+.features-field legend {
+    float: left;
+    width: 100%;
+    margin-bottom: 0.6rem;
+}
+
+.check-option {
+    display: flex;
+    min-height: 2rem;
+    align-items: center;
+    gap: 0.55rem;
+    cursor: pointer;
+}
+
+.check-option input {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin: 0;
+    accent-color: var(--blue);
+}
+
+.submit-button,
+.return-link {
+    display: block;
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 0;
+    border-radius: 3px;
+    background: var(--blue);
+    color: var(--white);
+    font: inherit;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.submit-button:hover,
+.return-link:hover {
+    background: var(--blue-dark);
+}
+
+.confirmation-main {
+    max-width: 34rem;
+}
+
+.confirmation {
+    text-align: center;
+}
+
+.confirmation-mark {
+    display: grid;
+    width: 3rem;
+    aspect-ratio: 1;
+    margin: 0 auto 0.75rem;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--blue-light);
+    color: var(--blue);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.confirmation > p:not(.confirmation-mark) {
+    color: var(--muted);
+}
+
+.review-total {
+    margin: 1.25rem 0;
+    padding: 0.8rem;
+    background: var(--paper);
+}
+
+.review-total strong {
+    color: var(--blue);
+    font-size: 1.15rem;
+}
+
+footer {
+    margin: 0 -1rem;
+    padding: 1rem;
+    background: var(--blue);
+    color: var(--white);
+    text-align: center;
+}
+
+footer p {
+    margin: 0.2rem 0;
+    font-size: 0.85rem;
+}
+
+footer p:last-child {
+    color: #d4c8ed;
+    font-size: 0.75rem;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+
+@media (min-width: 40rem) {
+    body {
+        padding: 0 1.5rem;
+    }
+
+    .page-header {
+        margin-right: -1.5rem;
+        margin-left: -1.5rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .review-form,
+    .confirmation {
+        padding: 2rem;
+    }
+
+    footer {
+        margin-right: -1.5rem;
+        margin-left: -1.5rem;
+    }
+}
