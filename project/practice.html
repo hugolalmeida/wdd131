@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Create, save, and review a breathing plan for your stress, focus, or sleep needs."
+    />
+    <meta name="author" content="Hugo Almeida" />
+    <title>Breathe Well | Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="scripts/site.js"></script>
+  </head>
+  <body data-page="practice">
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a class="brand" href="index.html" aria-label="Breathe Well home page">
+          <img src="images/Logo_Breath_Well.png" alt="Breathe Well logo" />
+          <span>Breathe Well</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="techniques.html">Techniques</a></li>
+            <li><a href="practice.html" class="active">Practice</a></li>
+            <li><a href="references.html">References</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-banner">
+        <div class="container small-container">
+          <p class="eyebrow">Build your plan</p>
+          <h1>Design a breathing routine that works for you.</h1>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="container practice-layout">
+          <form id="practice-form" class="practice-form">
+            <div class="form-row">
+              <label for="goal">What do you want to support?</label>
+              <select id="goal" name="goal" required>
+                <option value="" disabled selected>Select a need</option>
+                <option value="stress">Stress relief</option>
+                <option value="focus">Focus</option>
+                <option value="sleep">Sleep</option>
+                <option value="energy">Energy</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="technique">Choose a technique</label>
+              <select id="technique" name="technique" required>
+                <option value="" disabled selected>Select a technique</option>
+                <option value="Box Breathing">Box Breathing</option>
+                <option value="4-6 Breathing">4-6 Breathing</option>
+                <option value="Resonant Breathing">Resonant Breathing</option>
+                <option value="Nadi Shodhana">Nadi Shodhana</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="minutes">Session length (minutes)</label>
+              <input id="minutes" name="minutes" type="number" min="1" max="20" value="3" required />
+            </div>
+
+            <div class="form-row">
+              <label for="session-name">Session name</label>
+              <input id="session-name" name="sessionName" type="text" maxlength="60" placeholder="Midday reset" required />
+            </div>
+
+            <div class="form-row">
+              <label for="notes">Extra note</label>
+              <textarea id="notes" name="notes" rows="4" placeholder="I want to feel calmer before class."></textarea>
+            </div>
+
+            <button class="button primary" type="submit">Save my plan</button>
+          </form>
+
+          <aside class="summary-card" aria-live="polite">
+            <p class="eyebrow">Saved plan</p>
+            <div id="session-summary">
+              <p>No saved session yet. Choose your focus and save a breathing plan.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p>&copy; <span id="year">2026</span> Breathe Well</p>
+        <p><a href="references.html">References</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

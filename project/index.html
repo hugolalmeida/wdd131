@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Breathe Well helps you choose calming breathing practices for stress, focus, sleep, and daily wellbeing."
+    />
+    <meta name="author" content="Hugo Almeida" />
+    <title>Breathe Well | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="scripts/site.js"></script>
+  </head>
+  <body data-page="home">
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a class="brand" href="index.html" aria-label="Breathe Well home page">
+          <img src="images/Logo_Breath_Well.png" alt="Breathe Well logo" />
+          <span>Breathe Well</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="techniques.html">Techniques</a></li>
+            <li><a href="practice.html">Practice</a></li>
+            <li><a href="references.html">References</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Breathe with intention</p>
+            <h1>Find a calmer rhythm for your day.</h1>
+            <p class="lead">
+              Gentle breathing practices can help you settle stress, sharpen focus,
+              and create a few moments of better balance in everyday life.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="techniques.html">Explore techniques</a>
+              <a class="button secondary" href="practice.html">Build my routine</a>
+            </div>
+          </div>
+          <div class="hero-visual" aria-label="Person breathing peacefully">
+            <img
+              src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80"
+              alt="A person resting calmly outdoors while taking a breath"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section intro-section">
+        <div class="container two-column">
+          <div>
+            <p class="eyebrow">Why it matters</p>
+            <h2>Small breathing habits can change the tone of your day.</h2>
+          </div>
+          <p>
+            Whether you are preparing for a presentation, trying to focus on study,
+            or winding down before sleep, there is a breathing pattern that can help
+            you feel more grounded and in control.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section benefits-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Benefits</p>
+            <h2>Choose the support you need most.</h2>
+          </div>
+          <div class="card-grid three-up">
+            <article class="info-card">
+              <span class="card-icon" aria-hidden="true">◎</span>
+              <h3>Stress relief</h3>
+              <p>Slow, controlled breathing can help your body settle after a busy day or challenging moment.</p>
+            </article>
+            <article class="info-card">
+              <span class="card-icon" aria-hidden="true">✦</span>
+              <h3>Focus</h3>
+              <p>Short exercises can help you create space before studying, working, or making decisions.</p>
+            </article>
+            <article class="info-card">
+              <span class="card-icon" aria-hidden="true">☾</span>
+              <h3>Sleep</h3>
+              <p>Longer, slower patterns can gently shift your attention away from racing thoughts.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section match-section">
+        <div class="container narrow-panel">
+          <div class="section-heading left-align">
+            <p class="eyebrow">Quick match</p>
+            <h2>What do you need today?</h2>
+          </div>
+          <div class="form-row">
+            <label for="need-select">Choose a goal</label>
+            <select id="need-select" name="need-select">
+              <option value="stress">Reduce stress</option>
+              <option value="focus">Improve focus</option>
+              <option value="sleep">Prepare for sleep</option>
+              <option value="energy">Boost alertness</option>
+            </select>
+          </div>
+          <button id="match-button" class="button primary" type="button">Show my technique</button>
+          <div id="match-output" class="suggestion-box" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Featured practices</p>
+            <h2>Start with a simple rhythm.</h2>
+          </div>
+          <div class="card-grid three-up feature-grid">
+            <article class="feature-card">
+              <h3>Box breathing</h3>
+              <p>Four counts in, four counts hold, four counts out, four counts hold.</p>
+            </article>
+            <article class="feature-card">
+              <h3>4-6 breathing</h3>
+              <p>Longer exhale patterns can support a calmer nervous system.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Resonant breathing</h3>
+              <p>Slow, even breaths help create a steady, relaxed rhythm.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p>&copy; <span id="year">2026</span> Breathe Well</p>
+        <p><a href="references.html">References</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
